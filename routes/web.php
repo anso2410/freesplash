@@ -24,7 +24,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::getresource('albums', AlbumController::class);
+Route::resource('albums', AlbumController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
