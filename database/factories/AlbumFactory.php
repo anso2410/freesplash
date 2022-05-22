@@ -24,7 +24,7 @@ class AlbumFactory extends Factory
         return [
             'user_id' => User::factory(),
             'title' => $this->faker->sentence,
-            'description' => $this->faker->word(10, true),
+            'description' => $this->faker->words(10, true),
         ];
     }
 }
