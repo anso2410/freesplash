@@ -11,10 +11,15 @@ class Album extends Model
 {
     use HasFactory, HasSlug;
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
-            ->generateSlugsFrom('')
+            ->generateSlugsFrom('title')
             ->saveSlugsTo('slug')
             ->doNotGenerateSlugsOnUpdate();
     }
